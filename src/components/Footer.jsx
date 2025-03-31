@@ -52,7 +52,7 @@ export default function Footer() {
         </a>
       </div>
       <p style={footerTextStyle}>
-        © 2020 Stepping Stones Pre-School • Fordingbridge • Hampshire • SP6 1JF
+        © 2025 Stepping Stones Pre-School • Fordingbridge • Hampshire • SP6 1JF
         • Tel:{" "}
         <a
           href="tel:07436716189"
