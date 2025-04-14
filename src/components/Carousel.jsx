@@ -20,6 +20,7 @@ const CarouselComponent = () => (
       textAlign: "center",
       mt: 4,
       overflow: "visible",
+      fontSize: "1.5rem",
     }}
   >
     <header>Here's what parents had to say...</header>

@@ -21,6 +21,8 @@ const Navbar = () => {
               justifyContent: "space-between",
               alignItems: "center",
               width: "100%",
+              overflow: "auto",
+              whiteSpace: "nowrap",
             }}
           >
             <Typography variant="h6" sx={{ flexGrow: 1 }}>
@@ -30,9 +32,7 @@ const Navbar = () => {
               <Button color="inherit" component={Link} to="/home">
                 Home
               </Button>
-              <Button color="inherit" component={Link} to="/aboutus">
-                About Us
-              </Button>
+
               <Button color="inherit" component={Link} to="/contactus">
                 Contact Us
               </Button>
