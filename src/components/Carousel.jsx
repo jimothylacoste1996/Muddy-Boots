@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel styles
+import theme from "../theme";
 
 const testimonials = [
   "Stepping Stones is a very welcoming, friendly pre-school. Both of my children have loved it there and my 7-year-old often asks to go back.",
@@ -50,18 +51,19 @@ const CarouselComponent = () => (
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            backgroundColor: (theme) => theme.palette.secondary.main,
           }}
         >
           <Typography
             variant="h5"
             sx={{
-              fontStyle: "italic",
               color: "#333",
               textAlign: "center",
               whiteSpace: "normal",
               wordWrap: "break-word",
               lineHeight: 1.6,
               userSelect: "none",
+              color: "secondary",
             }}
           >
             "{text}"

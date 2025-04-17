@@ -7,10 +7,22 @@ import {
   Typography,
   Box,
 } from "@mui/material";
-import { Link } from "react-router-dom";
-import { styled } from "@mui/system";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const location = useLocation();
+
+  const navLinks = [
+    { label: "Home", path: "/home" },
+    { label: "About Us", path: "/aboutus" },
+    { label: "Our Team", path: "/ourteam" },
+    { label: "Fees", path: "/fees" },
+    { label: "Policies", path: "/policies" },
+    { label: "Registration", path: "/registration" },
+    { label: "Safeguarding", path: "/safeguarding" },
+    { label: "SENCO", path: "/senco" },
+    { label: "What We Do", path: "/whatwedo" },
+  ];
   return (
     <AppBar position="sticky" color="primary">
       <Toolbar>
@@ -29,31 +41,24 @@ const Navbar = () => {
               Muddy Boots
             </Typography>
             <Box sx={{ display: "flex", gap: 2 }}>
-              <Button color="inherit" component={Link} to="/home">
-                Home
-              </Button>
-
-              <Button color="inherit" component={Link} to="/contactus">
-                Contact Us
-              </Button>
-              <Button color="inherit" component={Link} to="/fees">
-                Fees
-              </Button>
-              <Button color="inherit" component={Link} to="/policies">
-                Policies
-              </Button>
-              <Button color="inherit" component={Link} to="/registration">
-                Registration
-              </Button>
-              <Button color="inherit" component={Link} to="/safeguarding">
-                Safeguarding
-              </Button>
-              <Button color="inherit" component={Link} to="/senco">
-                SENCO
-              </Button>
-              <Button color="inherit" component={Link} to="/whatwedo">
-                What We Do
-              </Button>
+              {navLinks.map((link) => (
+                <Button
+                  key={link.path}
+                  color="inherit"
+                  component={Link}
+                  to={link.path}
+                  sx={{
+                    color: location.pathname === link.path ? "white" : "black",
+                    borderBottom:
+                      location.pathname === link.path
+                        ? "2px solid white"
+                        : "none",
+                    borderRadius: 0,
+                  }}
+                >
+                  {link.label}
+                </Button>
+              ))}
             </Box>
           </Box>
         </Container>

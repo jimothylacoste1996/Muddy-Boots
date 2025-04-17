@@ -1,49 +1,48 @@
 import React from "react";
 import img1 from "../assets/img1.jpg";
 import CarouselComponent from "../components/Carousel";
+import { Box } from "@mui/material";
 
 const Home = () => {
   return (
     <>
-      <img
-        src={img1}
-        alt="Food Hygiene Rating"
-        style={{
-          paddingTop: "50px",
-          width: "50%",
-          height: "auto",
-          objectFit: "cover",
-        }}
-      />
-      <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
-        <h1>Welcome to Stepping Stones Pre-school</h1>
-        <p>
-          <strong>
-            Located in the heart of Fordingbridge, Stepping Stones Pre-school is
-            a warm, friendly, and inclusive setting for children aged 2 to 5
-            years.
-          </strong>
-        </p>
-        <p>
-          As a registered charity (No. 1030424) and Company Limited by
-          Guarantee, we are committed to providing high-quality childcare and
-          early education that is accessible to all families in our community.
-        </p>
-        <p>
-          We are proud to be rated 'Good' by Ofsted, and we continually strive
-          to enhance our provision with the goal of achieving an 'Outstanding'
-          rating in the future.
-        </p>
-        <p>
-          At Stepping Stones, we work in close partnership with parents and
-          carers to create a safe, happy, and stimulating environment where
-          every child is nurtured as an individual.
-        </p>
-        <p>
-          We are supported by our Local Authority and guided by a passionate
-          team dedicated to helping children develop confidence, curiosity, and
-          a lifelong love of learning.
-        </p>
+      <div style={{ padding: "20px" }}>
+        <Box
+          sx={{
+            width: "60%", // Set the width to 60% of the screen
+            margin: "auto", // Center the Box
+            background: "none",
+          }}
+        >
+          <h1>Welcome to Muddy Boots Pre-school</h1>
+          <p>
+            <strong>
+              Muddy Boots Fordingbridge Limited is a Company Limited by
+              Guarantee. Company number: 12773497. Also registered with the
+              Charity Commission. Charity number: 1206196.
+            </strong>
+          </p>
+          <p>
+            Our charitable purpose is to provide high quality care and education
+            by promoting equality that values diversity to children below the
+            statutory school age. We follow the Early Years Foundation Stage
+            Curriculum and are registering with Ofsted.{" "}
+            <p>
+              At Stepping Stones, we work in close partnership with parents and
+              carers to create a safe, happy, and stimulating environment where
+              every child is nurtured as an individual.
+            </p>
+            <p>
+              We are supported by our Local Authority and guided by a passionate
+              team dedicated to helping children develop confidence, curiosity,
+              and a lifelong love of learning.
+            </p>
+          </p>
+          <p>
+            Muddy Boots is located at the Fordingbridge Infant and Junior School
+            site.
+          </p>
+        </Box>
       </div>
       <CarouselComponent></CarouselComponent>
     </>
